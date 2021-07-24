@@ -22,10 +22,10 @@ CREATE TABLE users (
 `; */
 
 // Insert Data
-/* const query = `
+const query = `
 INSERT INTO users (email, firstName, lastName, age)
 VALUES ('johndoe@gmail.com', 'john', 'doe', 21)
-`; */
+`;
 
 // Select Data
 /* const query = `
@@ -41,10 +41,10 @@ WHERE email = 'johndoe@gmail.com'
 `; */
 
 // Delete Data
-const query = `
+/* const query = `
 DELETE FROM users
 WHERE email = 'johndoe@gmail.com'
-`;
+`; */
 
 /* 
 client.query(query, (err, res) => {
@@ -56,14 +56,14 @@ client.query(query, (err, res) => {
     client.end();
 }); */
 
-/* client.query(query, (err, res) => {
+client.query(query, (err, res) => {
     if (err) {
         console.error(err);
         return;
     }
     console.log('Data insert successful');
     client.end();
-}); */
+});
 
 /* client.query(query, (err, res) => {
     if (err) {
@@ -90,7 +90,7 @@ client.query(query, (err, res) => {
     client.end();
 }); */
 
-client.query(query, (err, res) => {
+/* client.query(query, (err, res) => {
     if (err) {
         console.error(err);
         return;
@@ -101,4 +101,4 @@ client.query(query, (err, res) => {
     }
     console.log('Data delete successful');
     client.end();
-});
+}); */
